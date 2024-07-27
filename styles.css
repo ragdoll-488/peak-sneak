@@ -1,0 +1,1189 @@
+
+@font-face {
+  font-family: 'liberation_sansregular';
+  src: url('LiberationSans-Regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'liberation_sansbold';
+  src: url('LiberationSans-Bold-webfont.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'McLaren-Regular';
+  src: url('McLaren-Regular.ttf') format('ttf'),
+}
+
+html {
+  /* font-family: "Tahoma", sans-serif; */
+  font-family: "liberation_sansregular", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #f0e5dd;
+  background-image: url("brushed-alum-dark.png");
+}
+
+button {
+  background-color: #0097b2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: calc(0.1em + 1vw);
+  transition: background-color 0.1s;
+}
+
+button:hover {
+  background-color: #ff3131;
+}
+
+header {
+  font-size: 1em;
+  /* background-color: #f5ba13; */
+  background-color: #aaa;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+#logo-container {
+  flex: 0.35;
+  text-align: center;
+}
+
+#logo-container img {
+  width: 80%;           /* Defines the width in percent of the containing block */
+  height: 80%;          /* Defines the height in percent of the containing block */ 
+  margin: 0.5em 0em;
+}
+
+#logo-container img:hover {
+  cursor: pointer;
+}
+
+#slogan-container {
+  flex: 0.35;
+  text-align: left;
+}
+
+#slogan-container p {
+  /* color: #fff; */
+  color: #ffef4a;
+  font-family: "McLaren", cursive;
+  font-size: calc(0.1em + 1.6vw);      /* 0.1em enable zoom, 2vw enable response to viewport width */
+}
+
+#user-access-container {
+  flex: 0.2;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+#user-access-container #logged-user{
+  width: 100%;
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: calc(0.1em + 1vw); 
+  position: absolute;
+  top: 1em;
+  margin: 0;
+  text-align: center;
+}
+
+#user-access-container #logged-user:hover{
+  color: #ff3131;
+  cursor: pointer;
+}
+
+#user-access-container #signup-button, #login-button, #logout-button {
+  flex: 1;
+  height: 28%;
+  margin: 0 0.5em;
+  margin-top: 0.5em;
+  padding: 0;
+}
+
+#cart-status-container {
+  flex: 0.1;
+  text-align: center;
+  position: relative;
+}
+
+#cart-status-container #cart-qty {
+  width: 100%;
+  color: #ff3131;
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: calc(0.1em + 1vw);
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0.15em;
+}
+
+#cart-status-container img {
+  width: 45%;
+  height: 50%;
+  padding-top: 0.5em;
+}
+
+#cart-status-container img:hover {
+  cursor: pointer;
+}
+
+#home-display-container {
+  margin-top: 9.5vw;
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;  
+}
+
+#display-space-before {
+  flex: 0.03;
+}
+
+#display-space-after {
+  flex: 0.03;
+}
+
+#brand-filter-container {
+  flex: 0.15;
+  position: sticky;
+  top: 9.375vw;
+  text-align: left;
+  background-color: #c0c0c0;
+  border-radius: 0.5em;
+  margin: 1em 0.6em;
+  margin-top: 0;
+}
+
+#brand-list {
+  list-style: none;
+  /* color: #0097b2; */
+  color: #555;
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: calc(0.1em + 1.5vw);
+  padding-left: 0.6em;
+  margin-top: 0.2em;
+}
+
+#brand-list li {
+  margin-bottom: 0.2em;
+}
+
+#brand-list li:hover {
+  color: #ff3131;
+  cursor: pointer;
+}
+
+#product-card-container {
+  flex: 0.79;
+  /* align-self: stretch; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-columns: repeat(5, minmax(100px, 1fr)); */
+  /* margin-top: 0.6em; */
+  margin-top: 0;
+}
+
+#card {
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: calc(0.1em + 1vw);
+  color: #555;
+  background-color: #dbdbdb;
+  padding: 0;
+  margin: 0.5em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  border: 0.18em #c0c0c0 solid;
+  border-radius: 0.5em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+#card img {
+  margin-top: 0;
+  width: 100%;
+  height: 50%;
+  /* border: 1px black solid; */
+  /* border-radius: 0.5em 0.5em 0em 0em; */
+  border-radius: 0.5em;
+}
+
+#card img:hover {
+  cursor: pointer;
+}
+
+#card .brand, .etc {
+  margin: 0.5em 0em;
+}
+#card .brand {
+  /* font-size: 1.1em; */
+  font-size: calc(0.1em + 1vw);
+}
+
+#card .etc {
+  /* font-size: 0.8em; */
+  font-size: calc(0.1em + 0.7vw);
+}
+
+#card button {
+  width: 35%;
+  height: 10%;
+  font-size: calc(0.1em + 0.8vw);
+  margin: 0.5em auto;
+  margin-bottom: 1.0em;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#product-detail-container {
+  width: 80%;
+  margin-top: 9.5vw;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: calc(0.1em + 1vw);
+  color: #555;
+  /* background-color: #c0c0c0; */
+  background-color: #dbdbdb;
+  padding: 0.5em;
+  border: 0.18em #c0c0c0 solid;
+  border-radius: 0.5em;
+}
+
+#image-detail-container {
+  flex: 0.5;
+  text-align: center;
+}
+
+#image-detail-container img {
+  /* margin-top: 1em; */
+  width: 90%;
+  height: 90%;
+  border-radius: 0.5em;
+}
+
+#info-detail-container {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#info-detail-container .brand {
+  /* font-size: 4em; */
+  font-size: calc(0.1em + 3.2vw);
+  margin: 0em;
+  margin-top: 0.2em;
+}
+
+#info-detail-container .etc {
+  /* font-size: 1.5em; */
+  font-size: calc(0.1em + 1vw);
+  margin-left: 0em;
+  margin-top: 0em;
+}
+
+#info-detail-container .lorem {
+  font-family: "liberation_sansregular", sans-serif;
+  /* font-size: 1em; */
+  font-size: calc(0.1em + 1vw);
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+  margin-left: 0em;
+  margin-right: 1em;
+}
+
+#add-item-form {
+  /* font-size: 1em; */
+  font-size: calc(0.1em + 1vw);
+  background: none;
+  width: 100%;
+  margin: 0.5em auto;
+  padding: 0em;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+#add-item-form div {
+  width: 100%;
+  margin: 0em;
+  text-align: center;
+}
+
+#add-item-form label {
+  display: inline-block;
+  /* width: 50%; */
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+#add-item-form input {
+  font-family: "liberation_sansregular", sans-serif;
+  font-size: calc(0.1em + 1.05vw);
+  width: 10%;
+  padding: 0em;
+  margin-bottom: 0.8em;
+}
+
+#add-item-form #update-cart-button {
+  text-align: center;
+  width: 30%;
+  height: 2em;              /* button height should support font size */
+  margin: 0.5em 0em;
+}
+
+.user-access-form {
+  margin-top: 9.5vw;
+  margin-left: auto;
+  margin-right: auto;
+  /* font-size: 1.1em; */    /* All em length refer to 1.1x16px = 17.6px */
+  font-size: calc(0.1em + 1vw);
+  color: #555;
+  background-color: #fff;
+  width: 50%;
+  /* height: 470px; */    /* No need since content will push away the bottom border */
+  padding: 0.5em;
+  border: 0.18em #c0c0c0 solid;
+  border-radius: 0.5em;
+}
+
+#login-form, #logout-form{
+  width: 40%;
+}
+
+.form-header {
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: calc(0.1em + 1.1vw);
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.user-access-form div {
+  margin: 1em auto;
+}
+
+.user-access-form label {
+  /* font-size: 1em; */
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+.user-access-form input {
+  font-family: "liberation_sansregular", sans-serif;
+  font-size: calc(0.1em + 0.9vw);
+  width: 60%;
+}
+
+.user-access-form input::placeholder {
+  font-family: "liberation_sansregular", sans-serif;
+  font-size: calc(0.1em + 0.8vw);
+  opacity: 0.75;
+  color: red;
+}
+
+.user-access-form #message-container, #button-container {
+  width: 100%;
+  text-align: center;  
+}
+
+#message-container #error-confirm-pwd-message, #error-message, #success-message {
+  opacity: 0.8;
+  color: red;
+}
+
+#message-container #success-message {
+  color: green;
+}
+
+#button-container button {
+  width: 30%;
+  height: 2.5em;
+  margin: 0.5em 0.5em;
+}
+
+#shopping-cart-form {
+  width: 80%;
+  border: 0.1em solid #aaa;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+
+#shopping-cart-form #shopping-cart-form-header {
+  font-size: 1.2em;         /* form already use responsive font-size */
+}
+
+#shopping-cart-form ul {
+  list-style: none;
+  padding: 0em;
+  margin: 0em auto;
+}
+
+#shopping-cart-form #total-amount {
+  font-family: "liberation_sansbold", sans-serif;
+  /* font-size: 1.2em; */
+  font-size: calc(0.1em + 1.2vw);
+  width: 97%;
+  margin-top: 1.5em;
+  text-align: right;
+}
+
+#shopping-cart-form #order-button-container {
+  width: 97%;
+  text-align: right;
+}
+
+#shopping-cart-form #goto-homepage-button-container {
+  text-align: center;
+}
+
+#shopping-cart-form .shopping-cart-button {
+  width: 25%;
+  height: 2.5em;
+  margin: 0.5em 0em;
+}
+
+#shopping-cart-form #cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  /* font-size: 1em; */
+  border: 0.08em solid #aaa;
+  border-radius: 0.4em;
+  padding: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+#cart-item #description-container, #amount-container {
+  margin: 0em;
+  padding: 0em;
+
+  display: flex;
+  align-items: center;
+}
+
+#cart-item #description-container {
+  flex: 2;
+  justify-content: flex-start;
+}
+
+#cart-item #amount-container {
+  flex: 1;
+  justify-content: center;
+}
+
+#cart-item img {
+  width: 20%;
+  height: 20%;
+  margin: 0em 1.5em;
+}
+
+#cart-item #qty-label {
+  width: 10%;
+  padding-right: 0em;
+}
+
+#cart-item #qty {
+  margin-left: 0.1em;
+}
+
+#cart-item #amount {
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: 1em;
+  width: 50%;
+  text-align: center;
+  margin-left: 0.5em;
+}
+
+#cart-item #delete-icon {
+  width: 8.5%;
+  height: 8.5%;
+  margin: 0em;
+  margin-left: 1em;
+}
+
+#cart-item #delete-icon:hover {
+  cursor: pointer;
+}
+
+#order-history-form, #order-items-form {
+  width: 60%;
+}
+
+#order-history-form, #order-items-form {
+  border: 0.1em solid #aaa;
+  border-radius: 0.4em;
+} 
+
+#order-history-header-container h2, #order-items-header-container h2 {
+  text-align: center;
+  color: #ff3131;
+  font-size: calc(0.1em + 2vw);
+  font-style: italic;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+#order-history-user-container, #order-items-user-container {
+  color: #0097b2;
+  font-size: calc(0.1em + 1.2vw);
+  border: 0.08em solid #aaa;
+  border-radius: 0.3em;
+  padding-left: 1.5em;
+  margin: 0.5em 1.5em;
+}
+
+#order-history-user-container p, #order-items-user-container p{
+  font-family: "liberation_sansbold", sans-serif;
+  text-align: left;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+#order-history-user-container span, #order-items-user-container span{
+  font-family: "liberation_sansregular", sans-serif;
+}
+
+#order-history-list, #order-items-list {
+  font-size: calc(0.1em + 1vw);
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  margin-left: 2.5em;
+}
+
+#order-history-list li, #order-items-list li {
+  padding-left: 0.5em;
+  margin-bottom: 0.8em;
+}
+
+#order-history-list li:hover{
+  color: #ff3131;
+  cursor: pointer;
+}
+
+#order-items-total-container {
+  text-align: center;
+  font-family: "liberation_sansbold", sans-serif;
+  font-size: calc(0.1em + 1.2vw);
+}
+
+#order-items-button-container {
+  width: 100%;
+  text-align: center;
+}
+
+#order-items-button-container button {
+  width: 30%;
+  height: 2.5em;              /* button height should support font size */
+  margin: 0.5em 0em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0.25em;
+  width: 100%;
+  font-size: calc(0.1em + 1vw);
+}
+
+footer p {
+  text-align: left;
+  color: #555;
+  margin: 0;
+  padding-left: 1em;
+}
+
+/* ---------- Setting for mobile display ---------- */
+
+@media (max-width: 1080px) {
+
+  /* font-size: calc(0.1em + 2vw); */
+
+  button {
+    background-color: #0097b2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 2vw);
+    transition: background-color 0.1s;
+  }
+  
+  header {
+    font-size: 1em;
+    /* background-color: #f5ba13; */
+    background-color: #aaa;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+  }
+  
+  #logo-container {
+    flex: 0.6;
+    text-align: center;
+  }
+  
+  #logo-container img {
+    width: 90%;           /* Defines the width in percent of the containing block */
+    height: 90%;          /* Defines the height in percent of the containing block */ 
+    margin: 0.5em 0em;
+  }
+  
+  #logo-container img:hover {
+    cursor: pointer;
+  }
+  
+  #slogan-container {
+    display: none;
+    flex: 0.25;
+    text-align: center;
+  }
+  
+  #slogan-container p {
+    /* color: #fff; */
+    color: #ffef4a;
+    font-family: "McLaren", cursive;
+    font-size: calc(0.1em + 2.6vw);      /* 0.1em enable zoom, 2vw enable response to viewport width */
+  }
+  
+  #user-access-container {
+    flex: 0.35;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  
+  #user-access-container #logged-user{
+    width: 100%;
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 1.8vw); 
+    position: absolute;
+    top: 1em;
+    margin: 0;
+    text-align: center;
+  }
+  
+  #user-access-container #logged-user:hover{
+    color: #ff3131;
+    cursor: pointer;
+  }
+  
+  #user-access-container #signup-button, #login-button, #logout-button {
+    flex: 1;
+    height: 28%;
+    margin: 0 0.5em;
+    margin-top: 0.8em;
+    padding: 0;
+  }
+  
+  #cart-status-container {
+    flex: 0.15;
+    text-align: center;
+    position: relative;
+  }
+  
+  #cart-status-container #cart-qty {
+    width: 100%;
+    color: #ff3131;
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 1.8vw);
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0.15em;
+  }
+  
+  #cart-status-container img {
+    width: 65%;
+    height: 70%;
+    padding-top: 0.6em;
+  }
+  
+  #cart-status-container img:hover {
+    cursor: pointer;
+  }
+
+  #home-display-container {
+    margin-top: 0;
+    margin-bottom: 1.5em;    
+    display: block;
+  }
+  
+  #display-space-before,  #display-space-after {
+    display: none;
+  }
+   
+  #brand-filter-container {
+    position: static;
+    width: 100%;
+    background-color: #c0c0c0;
+    border-radius: 0;
+    margin: 0;
+  }
+  
+  #brand-list {
+    list-style: none;
+    color: #555;
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 2.4vw);
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 0.5em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  #brand-list li {
+    padding: 0.5em 0em;
+    margin-bottom: 0;
+  }
+
+  #product-card-container {
+    width: 95%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  #card {
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 2vw);
+    color: #555;
+    background-color: #dbdbdb;
+    padding: 0;
+    margin: 0.2em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    border: 0.14em #c0c0c0 solid;
+    border-radius: 0.5em;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  #card img {
+    margin-top: 0;
+    width: 100%;
+    height: 50%;
+    /* border: 1px black solid; */
+    /* border-radius: 0.5em 0.5em 0em 0em; */
+    border-radius: 0.5em;
+  }
+  
+  #card img:hover {
+    cursor: pointer;
+  }
+  
+  #card .brand, .etc {
+    margin: 0.2em 0em;
+  }
+
+  #card .brand {
+    /* font-size: 1.1em; */
+    font-size: calc(0.1em + 1.75vw);
+  }
+  
+  #card .etc {
+    /* font-size: 0.8em; */
+    font-size: calc(0.1em + 1.6vw);
+  }
+  
+  #card button {
+    width: 45%;
+    height: 10%;
+    font-size: calc(0.1em + 1.8vw);
+    margin: 0.5em auto;
+    margin-bottom: 1em;
+  }
+    
+  #product-detail-container {
+    width: 90%;
+    margin: 1em auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 2.2vw);
+    color: #555;
+    background-color: #dbdbdb;
+    padding: 0.2em;
+    border: 0.14em #c0c0c0 solid;
+    border-radius: 0.4em;
+  }
+  
+  #image-detail-container {
+    flex: 0.5;
+    text-align: center;
+  }
+  
+  #image-detail-container img {
+    width: 95%;
+    height: 95%;
+    border-radius: 0.5em;
+  }
+  
+  #info-detail-container {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  #info-detail-container .brand {
+    font-size: calc(0.1em + 3.2vw);
+    margin: 0em;
+    margin-top: 0.2em;
+  }
+  
+  #info-detail-container .etc {
+    /* font-size: 1.5em; */
+    font-size: calc(0.1em + 2.2vw);
+    margin-left: 0em;
+    margin-top: 0em;
+  }
+  
+  #info-detail-container .lorem {
+    font-family: "liberation_sansregular", sans-serif;
+    /* font-size: 1em; */
+    font-size: calc(0.1em + 2vw);
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    margin-left: 0em;
+    margin-right: 1em;
+  }
+  
+  #add-item-form {
+    /* font-size: 1em; */
+    font-size: calc(0.1em + 2vw);
+    background: none;
+    width: 100%;
+    margin: 0.5em auto;
+    padding: 0em;
+    border: none;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  #add-item-form div {
+    width: 100%;
+    margin: 0em;
+    text-align: center;
+  }
+  
+  #add-item-form label {
+    display: inline-block;
+    /* width: 50%; */
+    text-align: right;
+    padding-right: 0.5em;
+  }
+  
+  #add-item-form input {
+    font-family: "liberation_sansregular", sans-serif;
+    font-size: calc(0.1em + 2vw);
+    width: 18%;
+    padding: 0em;
+    margin-bottom: 0.8em;
+  }
+  
+  #add-item-form #update-cart-button {
+    text-align: center;
+    width: 40%;
+    height: 2.2em;              /* button height should support font size */
+    margin: 0.5em 0em;
+  }
+
+  .user-access-form {
+    margin: 1em auto;
+    font-size: calc(0.1em + 2.2vw);
+    color: #555;
+    background-color: #fff;
+    width: 95%;
+    padding: 0.2em;
+    border: 0.14em #c0c0c0 solid;
+    border-radius: 0.4em;
+  }
+  
+  #login-form, #logout-form{
+    width: 80%;
+  }
+  
+  .form-header {
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 2.4vw);
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  
+  .user-access-form div {
+    margin: 1em auto;
+  }
+  
+  .user-access-form label {
+    /* font-size: 1em; */
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    padding-right: 0.5em;
+  }
+  
+  .user-access-form input {
+    font-family: "liberation_sansregular", sans-serif;
+    font-size: calc(0.1em + 2.2vw);
+    width: 60%;
+  }
+  
+  .user-access-form input::placeholder {
+    font-family: "liberation_sansregular", sans-serif;
+    font-size: calc(0.1em + 2vw);
+    opacity: 0.75;
+    color: red;
+  }
+  
+  .user-access-form #message-container, #button-container {
+    width: 100%;
+    text-align: center;  
+  }
+  
+  #message-container #error-confirm-pwd-message, #error-message, #success-message {
+    opacity: 0.8;
+    color: red;
+  }
+  
+  #message-container #success-message {
+    color: green;
+  }
+  
+  #button-container button {
+    width: 30%;
+    height: 2.2em;
+    margin: 0.5em 0.5em;
+  }
+
+  #shopping-cart-form {
+    width: 97%;
+    border: 0.1em solid #aaa;
+    padding: 0.1em;
+    margin-bottom: 1.5em;
+  }
+  
+  #shopping-cart-form #shopping-cart-form-header {
+    font-size: calc(0.1em + 2.4vw);     
+  }
+  
+  #shopping-cart-form ul {
+    list-style: none;
+    padding: 0em;
+    margin: 0em auto;
+  }
+  
+  #shopping-cart-form #total-amount {
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 2.4vw);   
+    width: 96%;
+    margin-top: 1.2em;
+    text-align: right;
+  }
+  
+  #shopping-cart-form #order-button-container {
+    width: 96%;
+    text-align: right;
+  }
+  
+  #shopping-cart-form #goto-homepage-button-container {
+    text-align: center;
+  }
+  
+  #shopping-cart-form .shopping-cart-button {
+    width: 28%;
+    height: 2.2em;
+    margin: 0.5em 0em;
+  }
+  
+  #shopping-cart-form #cart-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  
+    border: 0.08em solid #aaa;
+    border-radius: 0.4em;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+  }
+  
+  #cart-item #description-container, #amount-container {
+    margin: 0em;
+    padding: 0em;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #cart-item #description-container {
+    flex: 1.7;
+    justify-content: flex-start;
+    font-size: calc(0.1em + 1.8vw);  
+  }
+  
+  #cart-item #amount-container {
+    flex: 1.3;
+    justify-content: center;
+  }
+  
+  #cart-item img {
+    width: 30%;
+    height: 30%;
+    margin: 0em 0.4em;
+  }
+
+  #cart-item img:hover {
+    cursor: pointer;
+  }
+  
+  #cart-item #qty-label {
+    width: 10%;
+    font-size: calc(0.1em + 1.75vw);  
+    padding-right: 0em;
+  }
+
+  #cart-item #qty {
+    font-size: calc(0.1em + 1.75vw);  
+    padding-left: 0.1em;
+  }
+
+  #cart-item #amount {
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 1.75vw);
+    width: 65%;
+    text-align: center;
+  }
+  
+  #cart-item #delete-icon {
+    width: 8.5%;
+    height: 8.5%;
+    margin: 0em;
+  }
+  
+  #cart-item #delete-icon:hover {
+    cursor: pointer;
+  }
+  
+  #order-history-form, #order-items-form {
+    width: 90%;
+  }
+  
+  #order-history-form, #order-items-form {
+    border: 0.1em solid #aaa;
+    border-radius: 0.4em;
+  } 
+  
+  #order-history-header-container h2, #order-items-header-container h2 {
+    text-align: center;
+    color: #ff3131;
+    font-size: calc(0.1em + 2.4vw);
+    font-style: italic;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+  
+  #order-history-user-container, #order-items-user-container {
+    color: #0097b2;
+    font-size: calc(0.1em + 2.2vw);
+    border: 0.08em solid #aaa;
+    border-radius: 0.3em;
+    padding-left: 1.5em;
+    margin: 0.5em 1.5em;
+  }
+  
+  #order-history-user-container p, #order-items-user-container p{
+    font-family: "liberation_sansbold", sans-serif;
+    text-align: left;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+  }
+  
+  #order-history-user-container span, #order-items-user-container span{
+    font-family: "liberation_sansregular", sans-serif;
+  }
+  
+  #order-history-list, #order-items-list {
+    font-size: calc(0.1em + 1.8vw);
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 2.3em;
+    padding-left: 0.1em;
+  }
+
+  #order-history-list {
+    margin-left: 4em
+  }  
+  
+  #order-history-list li, #order-items-list li {
+    padding-left: 0.5em;
+    margin-bottom: 0.8em;
+  }
+  
+  #order-history-list li:hover{
+    color: #ff3131;
+    cursor: pointer;
+  }
+  
+  #order-items-total-container {
+    text-align: center;
+    font-family: "liberation_sansbold", sans-serif;
+    font-size: calc(0.1em + 2.2vw);
+  }
+  
+  #order-items-button-container {
+    width: 100%;
+    text-align: center;
+  }
+  
+  #order-items-button-container button {
+    width: 35%;
+    height: 2.2em;
+    margin: 0.5em 0em;
+  }
+}
